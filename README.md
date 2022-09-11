@@ -19,4 +19,8 @@ Para más información de las variables y de la base de datos consulte la págin
 
 ### Uso
 Una vez clonado este repositorio en una carpeta local o remota, abre la carpeta que contenga este proyecto en la terminal y corre el siguiente comando
+
 > python3 uso_K_means.py 
+
+# Resultados
+Al correr el programa, se mostrará en pantalla la presición del algoritmo y la matriz de confusión
