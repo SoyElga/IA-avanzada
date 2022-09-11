@@ -27,19 +27,17 @@ class KMeans:
     for i in range(self.max_iters):
       #Update clusters
       self.clusters = self._create_clusters(self.centroids)
-      if self.plot_steps:
-        self.plot()
 
       #Update centroids
       centroids_old = self.centroids
       self.centroids = self._get_centroids(self.clusters)
 
-      if self.plot_steps:
-        self.plot()
-
       #Check if converged
       if self._is_converged(centroids_old, self.centroids):
         break
+    
+    if self.plot_steps:
+      self.plot()
 
     #return cluster_lables
     return self._get_cluster_labels(self.clusters)
@@ -83,6 +81,6 @@ class KMeans:
       ax.scatter(*point)
 
     for point in self.centroids:
-      ax.scatter(*point, marker="x", color="black", linewidth=2)
+      ax.scatter(*point, marker="x", c="black", linewidth=2)
 
     plt.show()
